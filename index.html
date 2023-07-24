@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@700&family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+    <title>Bookmark</title>
+    <link rel="shortcut icon" href="./bookmark.png" type="image/x-icon">
+</head>
+<body>
+    <main>
+        <section id="caption" class="d-flex justify-content-center">
+            <h1 class=" mt-5">Bookmarker</h1>
+        </section>
+
+        <section class=" m-auto inputs p-4 ">
+            <div class="head text-center mb-5">
+                <h2><i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites<i class="fa-solid fa-bookmark"></i></h2>
+            </div>
+            <div class="input">
+                <label for=" siteName" class="mb-2"><i class="fa-solid fa-book-bookmark me-2"></i> Site Name</label>
+                <input type="text" id="siteName" class="form-control  yellowfocase" placeholder="Bookmark Name">
+            </div>
+            <div class="input mt-4">
+                <label for=" siteURL" class="mb-2"><i class="fa-solid fa-link me-2"></i>Site URL</label>
+                <input type="text" id="siteURL" class="form-control  yellowfocase" placeholder="Website URL">
+            </div>
+            <div class="button  d-flex justify-content-center mt-4 ">
+                <button class="btn btn-danger" id="addBtn" onclick="addSite()">Add Site</button>
+                <button class="btn btn-danger d-none" id="updateBtn" onclick="updateData()">Update Site</button>
+            </div>
+
+           
+        </section>
+        <input type="text" id="search" class="form-control w-50 my-2 m-auto" placeholder="Search..." oninput="searchSite()">
+
+        <section class=" m-auto mt-4 result">
+            <table class="table text-center">
+                <thead>
+                <tr>
+                    <th>Index</th>
+                    <th>Website Name</th>
+                    <th>Visit</th>
+                    <th>Delete</th>
+                    <th>Updata</th>
+                </tr>
+                </thead>
+                <tbody id="tabletr">
+                   
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

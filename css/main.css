@@ -1,0 +1,77 @@
+
+body{
+    background-color: #F7ECDE;
+}
+.inputs{
+    width: 85%;
+}
+.result{
+    width: 85%;
+}
+#caption h1{
+    font-size: 50px;
+    position: relative;
+    font-family: 'Pacifico', cursive;
+
+}
+label{
+    font-family: 'PT Sans', sans-serif;
+
+}
+table{
+    font-family: 'PT Sans', sans-serif;
+
+}
+#caption h1::before{
+content: '';
+position: absolute;
+bottom: 0;
+left: -1.5%;
+width: 103%;
+height: 20px;
+background-color: #FEC260;
+z-index: -1;
+transition: 0.5s;
+}
+
+#caption h1:hover::before{
+    height: 40px;
+}
+.yellowfocase:focus{
+    box-shadow: 0px 0px 0px 4px #fec1608e;
+border: 1px solid #FEC260;
+}
+.redfocase:focus{
+    box-shadow: 0px 0px 0px 4px rgba(255, 0, 0, 0.346);
+    border: 1px solid #ff0000df;
+}
+.greanfocase:focus{
+    box-shadow: 0px 0px 0px 4px rgba(0, 128, 0, 0.269);
+    border: 1px solid rgba(0, 128, 0, 0.624);
+}
+
+.head h2{
+    background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+    font-size: 25px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Righteous', cursive;
+}
+.inputs{
+    border-top: dotted;
+    border-bottom: dotted;
+    border-width: 2px 0 2px 0;
+    border-color: #352e28;
+    margin-top: 40px !important
+}
+.button button{
+    padding: 5px  40px;
+}
+a{
+    color: #fff;
+    text-decoration: none !important;
+}
+#search:focus{
+    box-shadow: 0px 0px 0px 4px #fec1608e;
+    border: 1px solid #FEC260;
+}
