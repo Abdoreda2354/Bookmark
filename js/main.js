@@ -15,10 +15,22 @@ function addSite() {
         name : siteName.value,
         url : siteURL.value,
     }
-    sitecontainer.push(site)
-    localStorage.setItem("site" , JSON.stringify(sitecontainer));
-    clearData(); 
-    displaydata();   
+    if (site.name == "" && site.url == "") {
+        window.alert(" site name and site URL are empty")
+    }
+    else if (site.name == "" ) {
+        window.alert(" site name is empty")
+    }
+    else if (site.url == ""){
+        window.alert(" site URL is empty")
+    }
+    else {
+        sitecontainer.push(site)
+        localStorage.setItem("site" , JSON.stringify(sitecontainer));
+        clearData(); 
+        displaydata(); 
+    }
+  
 }
 
 function clearData() {
