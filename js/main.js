@@ -33,6 +33,7 @@ function addSite() {
   
 }
 
+
 function clearData() {
     siteName.value = "";
     siteURL.value = "";
