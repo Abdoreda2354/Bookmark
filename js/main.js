@@ -15,23 +15,25 @@ function addSite() {
         name : siteName.value,
         url : siteURL.value,
     }
-    if (site.name == "" && site.url == "") {
-        window.alert(" site name and site URL are empty")
-    }
-    else if (site.name == "" ) {
-        window.alert(" site name is empty")
-    }
-    else if (site.url == ""){
-        window.alert(" site URL is empty")
-    }
-    else {
-        sitecontainer.push(site)
-        localStorage.setItem("site" , JSON.stringify(sitecontainer));
-        clearData(); 
-        displaydata(); 
-    }
-  
+  if (site.name == "" && site.url == "") {
+    alert("All inputs is required")
+  }  
+else if (regexName() == true && regexUrl() == true  ) {
+    sitecontainer.push(site)
+    localStorage.setItem("site" , JSON.stringify(sitecontainer));
+    clearData(); 
+    displaydata();
+    siteName.classList.remove("is-valid")
+    siteName.classList.remove("is-invalid")
+    siteURL.classList.remove("is-valid")
+    siteURL.classList.remove("is-invalid")
+
 }
+else{
+    alert("site name or site url not valid")
+}
+  
+    }
 
 
 function clearData() {
@@ -112,3 +114,34 @@ function updateData() {
 (function() {
     i
   })();
+
+  function regexName() {
+    
+      var regex = /([a-z]|[A-Z]){3,}/ 
+      var text =  siteName.value;
+      if (regex.test(text)) {
+        siteName.classList.add("is-valid")
+        siteName.classList.remove("is-invalid")
+        return true;
+        
+      } else {
+        siteName.classList.add("is-invalid")
+        siteName.classList.remove("is-valid")
+        return false;
+      }
+  }
+  function regexUrl() {
+    
+      var regex = /^https?:\/\/(?:www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(?:[-a-zA-Z0-9()@:%_\+.~#?&\/=]*)$/
+      var text =  siteURL.value;
+      if (regex.test(text)) {
+        siteURL.classList.add("is-valid")
+        siteURL.classList.remove("is-invalid")
+        return true;
+        
+      } else {
+        siteURL.classList.add("is-invalid")
+        siteURL.classList.remove("is-valid")
+        return false;
+      }
+  }

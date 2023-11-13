@@ -23,12 +23,12 @@
                 <h2><i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites<i class="fa-solid fa-bookmark"></i></h2>
             </div>
             <div class="input">
-                <label for=" siteName" class="mb-2"><i class="fa-solid fa-book-bookmark me-2"></i> Site Name</label>
-                <input type="text" id="siteName" class="form-control  yellowfocase" placeholder="Bookmark Name">
+                <label for=" siteName" class="mb-2 "><i class="fa-solid fa-book-bookmark me-2"></i> Site Name</label>
+                <input type="text" id="siteName" class="form-control  yellowfocase " placeholder="Bookmark Name" oninput="regexName()">
             </div>
             <div class="input mt-4">
                 <label for=" siteURL" class="mb-2"><i class="fa-solid fa-link me-2"></i>Site URL</label>
-                <input type="text" id="siteURL" class="form-control  yellowfocase" placeholder="Website URL">
+                <input type="text" id="siteURL" class="form-control  yellowfocase" placeholder="Website URL" oninput="regexUrl()">
             </div>
             <div class="button  d-flex justify-content-center mt-4 ">
                 <button class="btn btn-danger" id="addBtn" onclick="addSite()">Add Site</button>
